@@ -1,0 +1,559 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Controller">
+   <children>
+      <Pane layoutY="-21.0" prefHeight="500.0" prefWidth="500.0">
+         <children>
+            <TabPane layoutY="21.0" prefHeight="479.0" prefWidth="500.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="Standard">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField fx:id="input" editable="false" layoutX="7.0" layoutY="4.0" prefHeight="69.0" prefWidth="282.0" />
+                              <TextArea fx:id="operationArea" layoutX="291.0" layoutY="4.0" prefHeight="69.0" prefWidth="207.0" />
+                              <GridPane layoutY="81.0" prefHeight="365.0" prefWidth="500.0">
+                                <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#sin" prefHeight="79.0" prefWidth="76.0" text="sin" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#plusminus" prefHeight="68.0" prefWidth="95.0" text="+/-" GridPane.columnIndex="4" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#mod" prefHeight="83.0" prefWidth="180.0" text="\%" GridPane.columnIndex="5" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#raddeg" prefHeight="103.0" prefWidth="71.0" text="RAD/O" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                                    <Button alignment="CENTER" contentDisplay="CENTER" mnemonicParsing="false" onAction="#seven" prefHeight="100.0" prefWidth="183.0" text="7" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#eight" prefHeight="79.0" prefWidth="94.0" text="8" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#divide" prefHeight="110.0" prefWidth="72.0" text="÷" GridPane.columnIndex="6" GridPane.rowIndex="1" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#four" prefHeight="92.0" prefWidth="135.0" text="4" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#five" prefHeight="89.0" prefWidth="96.0" text="5" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#six" prefHeight="138.0" prefWidth="82.0" text="6" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#one" prefHeight="122.0" prefWidth="118.0" text="1" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#multiply" prefHeight="113.0" prefWidth="72.0" text="*" GridPane.columnIndex="6" GridPane.rowIndex="2" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#subtract" prefHeight="74.0" prefWidth="72.0" text="-" GridPane.columnIndex="6" GridPane.rowIndex="3" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#add" prefHeight="119.0" prefWidth="72.0" text="+" GridPane.columnIndex="6" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#clear" prefHeight="77.0" prefWidth="119.0" text="AC/C" GridPane.columnIndex="3" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#nine" prefHeight="80.0" prefWidth="104.0" text="9" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#two" prefHeight="87.0" prefWidth="142.0" text="2" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#three" prefHeight="101.0" prefWidth="72.0" text="3" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#zero" prefHeight="72.0" prefWidth="93.0" text="0" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#point" prefHeight="95.0" prefWidth="98.0" text="." GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#cos" prefHeight="79.0" prefWidth="90.0" text="cos" GridPane.rowIndex="1" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#tan" prefHeight="75.0" prefWidth="93.0" text="tan" GridPane.rowIndex="2" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#arcsin" prefHeight="106.0" prefWidth="85.0" text="arcsin" GridPane.rowIndex="3" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#arccos" prefHeight="141.0" prefWidth="100.0" text="arcos" GridPane.rowIndex="4" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#arctan" prefHeight="103.0" prefWidth="93.0" text="arctan" GridPane.rowIndex="5" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#pi" prefHeight="63.0" prefWidth="109.0" text="π" GridPane.columnIndex="1" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#e" prefHeight="71.0" prefWidth="173.0" text="e" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#power" prefHeight="99.0" prefWidth="136.0" text="^" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#log" prefHeight="83.0" prefWidth="113.0" text="log" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#ln" prefHeight="175.0" prefWidth="209.0" text="ln" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#root" prefHeight="110.0" prefWidth="138.0" text="√" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#abs" prefHeight="80.0" prefWidth="95.0" text="abs" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#rand" prefHeight="159.0" prefWidth="138.0" text="Rand" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#perm" prefHeight="84.0" prefWidth="122.0" text="nPr" GridPane.columnIndex="2" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#comp" prefHeight="108.0" prefWidth="115.0" text="nCr" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#factorial" prefHeight="153.0" prefWidth="171.0" text="!" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#inverse" prefHeight="108.0" prefWidth="121.0" text="1/x" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#enter" prefHeight="78.0" prefWidth="217.0" text="Enter" GridPane.columnIndex="5" GridPane.columnSpan="2" GridPane.rowIndex="5" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#scientificNotation" prefHeight="112.0" prefWidth="98.0" text="SciNot" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#store" prefHeight="133.0" prefWidth="137.0" text="STORE" GridPane.columnIndex="6" GridPane.rowIndex="4" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#value" prefHeight="97.0" prefWidth="111.0" text="VALUE" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                                 </children>
+                              </GridPane>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="Stats">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="list1" layoutX="14.0" layoutY="6.0" prefHeight="379.0" prefWidth="85.0">
+                                <columns>
+                                  <TableColumn fx:id="l1" prefWidth="85.0" text="X/L1" />
+                                </columns>
+                              </TableView>
+                              <GridPane layoutX="14.0" layoutY="384.0" prefHeight="48.0" prefWidth="170.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="addL1" prefHeight="68.0" prefWidth="50.0" />
+                                    <TextField fx:id="addL2" prefHeight="59.0" prefWidth="50.0" GridPane.columnIndex="1" />
+                                    <Button alignment="CENTER" mnemonicParsing="false" onAction="#addPoint" prefHeight="85.0" prefWidth="51.0" text="Add" GridPane.columnIndex="2" />
+                                    <Button mnemonicParsing="false" onAction="#deletePoint" prefHeight="57.0" prefWidth="43.0" text="Del" GridPane.columnIndex="3" />
+                                 </children>
+                              </GridPane>
+                              <Accordion layoutX="189.0" layoutY="14.0" prefHeight="417.0" prefWidth="308.0">
+                                <panes>
+                                  <TitledPane animated="false" prefHeight="304.0" prefWidth="283.0" text="Tests">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="280.0" prefWidth="276.0">
+                                             <children>
+                                                <TabPane layoutX="-1.0" prefHeight="339.0" prefWidth="307.0" tabClosingPolicy="UNAVAILABLE">
+                                                  <tabs>
+                                                    <Tab text="1 Prop Z">
+                                                         <content>
+                                                            <AnchorPane prefHeight="304.0" prefWidth="312.0">
+                                                               <children>
+                                                                  <TextFlow prefHeight="198.0" prefWidth="105.0">
+                                                                     <children>
+                                                                        <TextArea nodeOrientation="LEFT_TO_RIGHT" prefHeight="201.0" prefWidth="115.0" text="Po:&#10;x:&#10;n:">
+                                                                           <font>
+                                                                              <Font size="46.0" />
+                                                                           </font>
+                                                                        </TextArea>
+                                                                     </children>
+                                                                  </TextFlow>
+                                                                  <VBox layoutX="112.0" prefHeight="200.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <TextField fx:id="prop1Test_Po" prefHeight="66.6666" prefWidth="200.0" />
+                                                                        <TextField fx:id="prop1Test_x" prefHeight="66.666" prefWidth="200.0" />
+                                                                        <TextField fx:id="prop1Test_n" prefHeight="66.666" prefWidth="200.0" />
+                                                                     </children>
+                                                                  </VBox>
+                                                                  <ChoiceBox fx:id="prop1Test_Type" layoutY="201.0" prefHeight="39.0" prefWidth="306.0" />
+                                                                  <Button layoutY="238.0" mnemonicParsing="false" onAction="#prop1Test_calc" prefHeight="66.0" prefWidth="76.0" text="Calculate" />
+                                                                  <TextArea fx:id="prop1Test_answer" editable="false" layoutX="76.0" layoutY="238.0" prefHeight="64.0" prefWidth="230.0" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content>
+                                                    </Tab>
+                                                    <Tab text="2 Prop Z">
+                                                         <content>
+                                                            <AnchorPane prefHeight="229.0" prefWidth="312.0">
+                                                               <children>
+                                                                  <TextFlow prefHeight="198.0" prefWidth="105.0">
+                                                                     <children>
+                                                                        <TextArea nodeOrientation="LEFT_TO_RIGHT" prefHeight="243.0" prefWidth="111.0" text="x1:&#10;n1:&#10;x2:&#10;n2:">
+                                                                           <font>
+                                                                              <Font size="36.0" />
+                                                                           </font>
+                                                                        </TextArea>
+                                                                     </children>
+                                                                  </TextFlow>
+                                                                  <VBox layoutX="112.0" prefHeight="200.0" prefWidth="200.0">
+                                                                     <children>
+                                                                        <TextField fx:id="prop2Test_x1" prefHeight="50.0" prefWidth="200.0" />
+                                                                        <TextField fx:id="prop2Test_n1" prefHeight="50.0" prefWidth="200.0" />
+                                                                        <TextField fx:id="prop2Test_x2" prefHeight="50.0" prefWidth="200.0" />
+                                                                        <TextField fx:id="prop2Test_n2" prefHeight="50.0" prefWidth="200.0" />
+                                                                     </children>
+                                                                  </VBox>
+                                                                  <ChoiceBox fx:id="prop2Test_Type" layoutY="201.0" prefHeight="36.0" prefWidth="306.0" />
+                                                                  <TextArea fx:id="prop2Test_answer" editable="false" layoutX="76.0" layoutY="238.0" prefHeight="63.0" prefWidth="230.0" />
+                                                                  <Button layoutY="238.0" mnemonicParsing="false" onAction="#prop2Test_calc" prefHeight="64.0" prefWidth="77.0" text="Calculate" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                         </content></Tab>
+                                                      <Tab text="1 Samp T">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <TabPane prefHeight="304.0" prefWidth="311.0" tabClosingPolicy="UNAVAILABLE">
+                                                                    <tabs>
+                                                                      <Tab text="Data">
+                                                                        <content>
+                                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <TextArea prefHeight="55.0" prefWidth="80.0" text="μo:">
+                                                                                       <font>
+                                                                                          <Font size="32.0" />
+                                                                                       </font>
+                                                                                    </TextArea>
+                                                                                    <TextField fx:id="samp1Test_muData" layoutX="80.0" prefHeight="55.0" prefWidth="227.0" />
+                                                                                    <Button layoutX="211.0" layoutY="55.0" mnemonicParsing="false" onAction="#samp1Test_calcData" prefHeight="27.0" prefWidth="96.0" text="Calculate" />
+                                                                                    <TextArea fx:id="samp1Test_answerData" editable="false" layoutX="4.0" layoutY="82.0" prefHeight="190.0" prefWidth="303.0">
+                                                                                       <font>
+                                                                                          <Font size="20.0" />
+                                                                                       </font>
+                                                                                    </TextArea>
+                                                                                    <ChoiceBox fx:id="samp1Test_TypeData" layoutX="3.0" layoutY="55.0" prefHeight="27.0" prefWidth="209.0" />
+                                                                                 </children></AnchorPane>
+                                                                        </content>
+                                                                      </Tab>
+                                                                      <Tab text="Stats">
+                                                                           <content>
+                                                                              <AnchorPane prefHeight="200.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <VBox layoutX="131.0" prefHeight="174.0" prefWidth="180.0">
+                                                                                       <children>
+                                                                                          <TextField fx:id="samp1Test_muStat" prefHeight="40.0" prefWidth="236.0" />
+                                                                                          <TextField fx:id="samp1Test_x" prefHeight="45.0" prefWidth="100.0" />
+                                                                                          <TextField fx:id="samp1Test_sx" prefHeight="45.0" prefWidth="100.0" />
+                                                                                          <TextField fx:id="samp1Test_n" prefHeight="42.0" prefWidth="180.0" />
+                                                                                       </children>
+                                                                                    </VBox>
+                                                                                    <TextFlow prefHeight="174.0" prefWidth="70.0">
+                                                                                       <children>
+                                                                                          <TextArea prefHeight="172.0" prefWidth="129.0" text="μo:&#10;x:&#10;Sx:&#10;n:">
+                                                                                             <font>
+                                                                                                <Font size="31.0" />
+                                                                                             </font>
+                                                                                          </TextArea>
+                                                                                       </children>
+                                                                                    </TextFlow>
+                                                                                    <ChoiceBox fx:id="samp1Test_TypeStat" layoutY="174.0" prefHeight="27.0" prefWidth="308.0" />
+                                                                                    <Button layoutY="202.0" mnemonicParsing="false" onAction="#samp1Test_calcStat" prefHeight="67.0" prefWidth="76.0" text="Calculate" />
+                                                                                    <TextArea fx:id="samp1Test_answerStat" editable="false" layoutX="76.0" layoutY="202.0" prefHeight="69.0" prefWidth="232.0" />
+                                                                                 </children>
+                                                                              </AnchorPane>
+                                                                           </content>
+                                                                      </Tab>
+                                                                    </tabs>
+                                                                  </TabPane>
+                                                               </children></AnchorPane>
+                                                        </content>
+                                                      </Tab>
+                                                      <Tab text="2 Samp T">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <TabPane prefHeight="306.0" prefWidth="310.0" tabClosingPolicy="UNAVAILABLE">
+                                                                    <tabs>
+                                                                      <Tab text="Data">
+                                                                        <content>
+                                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <ChoiceBox fx:id="samp2Test_TypeData" layoutY="1.0" prefHeight="27.0" prefWidth="216.0" />
+                                                                                    <Button layoutX="216.0" layoutY="1.0" mnemonicParsing="false" onAction="#samp2Test_calcData" prefHeight="27.0" prefWidth="90.0" text="Calculate" />
+                                                                                    <TextArea fx:id="samp2Test_answerData" editable="false" layoutY="28.0" prefHeight="243.0" prefWidth="309.0">
+                                                                                       <font>
+                                                                                          <Font size="16.0" />
+                                                                                       </font>
+                                                                                    </TextArea>
+                                                                                 </children>
+                                                                              </AnchorPane>
+                                                                        </content>
+                                                                      </Tab>
+                                                                      <Tab text="Stats">
+                                                                        <content>
+                                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="205.0" prefWidth="310.0">
+                                                                                 <children>
+                                                                                    <TextArea prefHeight="168.0" prefWidth="139.0" text="X1:&#10;Sx1:&#10;N1:&#10;X2:&#10;Sx2:&#10;N2:&#10;">
+                                                                                       <font>
+                                                                                          <Font size="20.0" />
+                                                                                       </font>
+                                                                                    </TextArea>
+                                                                                    <VBox layoutX="115.0" prefHeight="168.0" prefWidth="194.0">
+                                                                                       <children>
+                                                                                          <TextField fx:id="samp2Test_x1" prefHeight="30.0" prefWidth="194.0" />
+                                                                                          <TextField fx:id="samp2Test_sx1" prefHeight="30.0" prefWidth="194.0" />
+                                                                                          <TextField fx:id="samp2Test_n1" prefHeight="30.0" prefWidth="194.0" />
+                                                                                          <TextField fx:id="samp2Test_x2" prefHeight="30.0" prefWidth="194.0" />
+                                                                                          <TextField fx:id="samp2Test_sx2" prefHeight="30.0" prefWidth="194.0" />
+                                                                                          <TextField fx:id="samp2Test_n2" prefHeight="30.0" prefWidth="194.0" />
+                                                                                       </children>
+                                                                                    </VBox>
+                                                                                    <ChoiceBox fx:id="samp2Test_TypeStat" layoutY="169.0" prefHeight="27.0" prefWidth="308.0" />
+                                                                                    <Button layoutY="196.0" mnemonicParsing="false" onAction="#samp2Test_calcStat" prefHeight="73.0" prefWidth="76.0" text="Calculate" />
+                                                                                    <TextArea fx:id="samp2Test_answerStat" editable="false" layoutX="76.0" layoutY="196.0" prefHeight="73.0" prefWidth="232.0" />
+                                                                                 </children>
+                                                                              </AnchorPane>
+                                                                        </content>
+                                                                      </Tab>
+                                                                    </tabs>
+                                                                  </TabPane>
+                                                               </children></AnchorPane>
+                                                        </content>
+                                                      </Tab>
+                                                  </tabs>
+                                                </TabPane>
+                                             </children>
+                                          </AnchorPane>
+                                    </content>
+                                  </TitledPane>
+                                  <TitledPane animated="false" text="Intervals">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TabPane prefHeight="335.0" prefWidth="307.0" tabClosingPolicy="UNAVAILABLE">
+                                                  <tabs>
+                                                      <Tab text="1 Prop Z">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <TextArea editable="false" layoutY="1.0" prefHeight="150.0" prefWidth="140.0" text="x:&#10;n:&#10;CL:">
+                                                                     <font>
+                                                                        <Font size="35.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <VBox layoutX="140.0" layoutY="1.0" prefHeight="150.0" prefWidth="167.0">
+                                                                     <children>
+                                                                        <TextField fx:id="prop1Int_x" prefHeight="50.0" prefWidth="167.0" />
+                                                                        <TextField fx:id="prop1Int_n" prefHeight="50.0" prefWidth="167.0" />
+                                                                        <TextField fx:id="prop1Int_cl" prefHeight="50.0" prefWidth="166.0" />
+                                                                     </children>
+                                                                  </VBox>
+                                                                  <Button layoutY="151.0" mnemonicParsing="false" onAction="#prop1ZInt_calc" prefHeight="27.0" prefWidth="309.0" text="Generate Confidence Interval" />
+                                                                  <TextArea fx:id="prop1Int_answer" editable="false" layoutY="178.0" prefHeight="125.0" prefWidth="309.0">
+                                                                     <font>
+                                                                        <Font size="18.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </content>
+                                                      </Tab>
+                                                      <Tab text="2 Prop Z">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <VBox layoutX="199.0" prefHeight="155.0" prefWidth="108.0">
+                                                                     <children>
+                                                                        <TextField fx:id="prop2Int_x1" prefHeight="31.0" prefWidth="108.0" />
+                                                                        <TextField fx:id="prop2Int_n1" prefHeight="31.0" prefWidth="108.0" />
+                                                                        <TextField fx:id="prop2Int_x2" prefHeight="31.0" prefWidth="108.0" />
+                                                                        <TextField fx:id="prop2Int_n2" prefHeight="31.0" prefWidth="108.0" />
+                                                                        <TextField fx:id="prop2Int_cl" prefHeight="31.0" prefWidth="108.0" />
+                                                                     </children>
+                                                                  </VBox>
+                                                                  <TextArea editable="false" layoutX="-7.0" prefHeight="155.0" prefWidth="207.0" text="X1:&#10;N1:&#10;X2:&#10;N2:&#10;CL:">
+                                                                     <font>
+                                                                        <Font size="23.0" />
+                                                                     </font>
+                                                                  </TextArea>
+                                                                  <Button layoutY="155.0" mnemonicParsing="false" onAction="#prop2ZInt_calc" prefHeight="27.0" prefWidth="307.0" text="Generate Confidence Interval" />
+                                                                  <TextArea fx:id="prop2Int_answer" editable="false" layoutY="182.0" prefHeight="120.0" prefWidth="306.0" />
+                                                               </children></AnchorPane>
+                                                        </content>
+                                                      </Tab>
+                                                    <Tab text="1 Samp T">
+                                                      <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <TabPane prefHeight="302.0" prefWidth="308.0" tabClosingPolicy="UNAVAILABLE">
+                                                                    <tabs>
+                                                                      <Tab text="Data">
+                                                                        <content>
+                                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="263.0" prefWidth="281.0">
+                                                                                 <children>
+                                                                                    <TextArea layoutX="-2.0" prefHeight="29.0" prefWidth="92.0" text="C-Level:&#10;" />
+                                                                                    <TextField fx:id="samp1Int_clData" layoutX="71.0" prefHeight="28.0" prefWidth="236.0" />
+                                                                                    <Button layoutY="28.0" mnemonicParsing="false" onAction="#samp1Int_calcData" prefHeight="27.0" prefWidth="306.0" text="Generate Confidence Interval" />
+                                                                                    <TextArea fx:id="samp1Int_answerData" editable="false" layoutY="55.0" prefHeight="216.0" prefWidth="307.0" />
+                                                                                 </children>
+                                                                              </AnchorPane>
+                                                                        </content>
+                                                                      </Tab>
+                                                                      <Tab text="Stats">
+                                                                        <content>
+                                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <TextArea editable="false" prefHeight="160.0" prefWidth="253.0" text="X:&#10;Sx:&#10;N:&#10;CL:">
+                                                                                       <font>
+                                                                                          <Font size="31.0" />
+                                                                                       </font>
+                                                                                    </TextArea>
+                                                                                    <VBox layoutX="208.0" prefHeight="160.0" prefWidth="98.0">
+                                                                                       <children>
+                                                                                          <TextField fx:id="samp1Int_x" prefHeight="40.0" prefWidth="100.0" />
+                                                                                          <TextField fx:id="samp1Int_sx" prefHeight="40.0" prefWidth="100.0" />
+                                                                                          <TextField fx:id="samp1Int_n" prefHeight="40.0" prefWidth="100.0" />
+                                                                                          <TextField fx:id="samp1Int_clStat" prefHeight="40.0" prefWidth="100.0" />
+                                                                                       </children>
+                                                                                    </VBox>
+                                                                                    <TextArea fx:id="samp1Int_answerStat" editable="false" layoutY="187.0" prefHeight="84.0" prefWidth="307.0" />
+                                                                                    <Button layoutY="160.0" mnemonicParsing="false" onAction="#samp1Int_calcStat" prefHeight="27.0" prefWidth="306.0" text="Generate Confidence Interval" />
+                                                                                 </children>
+                                                                              </AnchorPane>
+                                                                        </content>
+                                                                      </Tab>
+                                                                    </tabs>
+                                                                  </TabPane>
+                                                               </children></AnchorPane>
+                                                      </content>
+                                                    </Tab>
+                                                    <Tab text="2 Samp T">
+                                                      <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <TabPane prefHeight="303.0" prefWidth="308.0" tabClosingPolicy="UNAVAILABLE">
+                                                                    <tabs>
+                                                                      <Tab text="Data">
+                                                                        <content>
+                                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <TextArea prefHeight="36.0" prefWidth="90.0" text="C-Level">
+                                                                                       <font>
+                                                                                          <Font size="17.0" />
+                                                                                       </font>
+                                                                                    </TextArea>
+                                                                                    <TextField fx:id="samp2Int_clData" layoutX="90.0" prefHeight="36.0" prefWidth="216.0" />
+                                                                                    <Button layoutY="36.0" mnemonicParsing="false" onAction="#samp2Int_calcData" prefHeight="27.0" prefWidth="306.0" text="Generate Confidence Interval" />
+                                                                                    <TextArea fx:id="samp2Int_answerData" editable="false" layoutY="63.0" prefHeight="206.0" prefWidth="306.0" />
+                                                                                 </children>
+                                                                              </AnchorPane>
+                                                                        </content>
+                                                                      </Tab>
+                                                                      <Tab text="Stats">
+                                                                        <content>
+                                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                                                 <children>
+                                                                                    <TextArea prefHeight="189.0" prefWidth="243.0" text="X1:&#10;Sx1:&#10;N1:&#10;X2:&#10;Sx2:&#10;N2:&#10;C-Level">
+                                                                                       <font>
+                                                                                          <Font size="20.0" />
+                                                                                       </font>
+                                                                                    </TextArea>
+                                                                                    <VBox layoutX="208.0" prefHeight="175.0" prefWidth="99.0">
+                                                                                       <children>
+                                                                                          <TextField fx:id="samp2Int_x1" prefHeight="27.0" prefWidth="100.0" />
+                                                                                          <TextField fx:id="samp2Int_sx1" />
+                                                                                          <TextField fx:id="samp2Int_n1" />
+                                                                                          <TextField fx:id="samp2Int_x2" />
+                                                                                          <TextField fx:id="samp2Int_sx2" />
+                                                                                          <TextField fx:id="samp2Int_n2" />
+                                                                                          <TextField fx:id="samp2Int_clStat" />
+                                                                                       </children>
+                                                                                    </VBox>
+                                                                                    <Button layoutY="189.0" mnemonicParsing="false" onAction="#samp2Int_calcStat" prefHeight="27.0" prefWidth="306.0" text="Generate Confidence Interval" />
+                                                                                    <TextArea fx:id="samp2Int_answerStat" editable="false" layoutX="1.0" layoutY="216.0" prefHeight="53.0" prefWidth="305.0" />
+                                                                                 </children>
+                                                                              </AnchorPane>
+                                                                        </content>
+                                                                      </Tab>
+                                                                    </tabs>
+                                                                  </TabPane>
+                                                               </children></AnchorPane>
+                                                      </content>
+                                                    </Tab>
+                                                  </tabs>
+                                                </TabPane>
+                                             </children></AnchorPane>
+                                    </content>
+                                  </TitledPane>
+                                  <TitledPane animated="false" prefHeight="326.0" prefWidth="305.0" text="Other">
+                                    <content>
+                                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                             <children>
+                                                <TabPane prefHeight="335.0" prefWidth="307.0" tabClosingPolicy="UNAVAILABLE">
+                                                  <tabs>
+                                                    <Tab text="X2GOF">
+                                                      <content>
+                                                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <Button layoutY="1.0" mnemonicParsing="false" onAction="#x2GOF" prefHeight="27.0" prefWidth="306.0" text="Calculate" />
+                                                                  <TextArea editable="false" layoutY="28.0" prefHeight="274.0" prefWidth="308.0" fx:id="x2Answer" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                      </content>
+                                                    </Tab>
+                                                      <Tab text="VarStats">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <TextArea editable="false" layoutX="1.0" layoutY="29.0" prefHeight="272.0" prefWidth="153.0" fx:id="xStats" />
+                                                                  <Button layoutY="1.0" mnemonicParsing="false" onAction="#var1Stats" prefHeight="27.0" prefWidth="154.0" text="1 Var Stats" />
+                                                                  <Button layoutX="154.0" layoutY="1.0" mnemonicParsing="false" onAction="#var2Stats" prefHeight="27.0" prefWidth="152.0" text="2 Var Stats" />
+                                                                  <TextArea fx:id="yStats" editable="false" layoutX="155.0" layoutY="30.0" prefHeight="271.0" prefWidth="151.0" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </content>
+                                                      </Tab>
+                                                      <Tab text="LinReg">
+                                                        <content>
+                                                          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                                               <children>
+                                                                  <Button layoutY="1.0" mnemonicParsing="false" onAction="#linearRegression" prefHeight="27.0" prefWidth="308.0" text="Calculate" />
+                                                                  <TextArea fx:id="linReg" editable="false" layoutY="28.0" prefHeight="275.0" prefWidth="306.0" />
+                                                               </children>
+                                                            </AnchorPane>
+                                                        </content>
+                                                      </Tab>
+                                                  </tabs>
+                                                </TabPane>
+                                             </children></AnchorPane>
+                                    </content>
+                                  </TitledPane>
+                                </panes>
+                              </Accordion>
+                              <TableView fx:id="list2" layoutX="99.0" layoutY="6.0" prefHeight="379.0" prefWidth="85.0">
+                                <columns>
+                                  <TableColumn fx:id="l2" prefWidth="84.0" text="Y/L2" />
+                                </columns>
+                              </TableView>
+                           </children></AnchorPane>
+                  </content>
+                </Tab>
+                  <Tab text="FG Calculator">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextFlow layoutX="14.0" layoutY="14.0" prefHeight="315.0" prefWidth="300.0">
+                                 <children>
+                                    <Label prefHeight="105.0" prefWidth="305.0" text="Current Grade" textAlignment="CENTER">
+                                       <font>
+                                          <Font size="42.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="105.0" prefWidth="302.0" text="Final Worth">
+                                       <font>
+                                          <Font size="42.0" />
+                                       </font>
+                                    </Label>
+                                    <Label prefHeight="105.0" prefWidth="302.0" text="Grade Wanted">
+                                       <font>
+                                          <Font size="42.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </TextFlow>
+                              <GridPane layoutX="342.0" layoutY="15.0" prefHeight="416.0" prefWidth="144.0">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints maxHeight="91.0" minHeight="10.0" prefHeight="91.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="133.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES" />
+                                  <RowConstraints maxHeight="113.0" minHeight="10.0" prefHeight="79.0" vgrow="SOMETIMES" />
+                                    <RowConstraints maxHeight="94.0" minHeight="10.0" prefHeight="87.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+                                    <TextField fx:id="currentGrade" prefHeight="50.0" prefWidth="150.0" />
+                                    <TextField fx:id="finalWorth" prefHeight="50.0" prefWidth="150.0" GridPane.rowIndex="1" />
+                                    <TextField fx:id="gradeDesired" prefHeight="50.0" prefWidth="150.0" GridPane.rowIndex="2" />
+                                    <Button mnemonicParsing="false" onAction="#calculateFinalGrade" prefHeight="110.0" prefWidth="189.0" text="Enter" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font size="37.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </GridPane>
+                              <TextField fx:id="finalGradeAnswer" editable="false" layoutX="14.0" layoutY="338.0" prefHeight="94.0" prefWidth="301.0" />
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

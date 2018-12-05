@@ -1,0 +1,5 @@
+package application;
+
+public enum Operation {
+ MODULOUS, PERMUTATION, COMPUTATION, PLUS, DIVIDE, POW, MULTIPLY, SUBTRACT, DEFAULT;
+}
